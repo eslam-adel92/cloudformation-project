@@ -137,5 +137,10 @@ Resources:
         Fn::ImportValue:
           Fn::Sub: "${EnvironmentName}-VPCID"
 
-  Outputs: 
-  #Bonus points for useful outputs!
+Outputs: 
+#Bonus points for useful outputs!
+  LoadBalancerDNSName: 
+    Description: The bublic URL of the LoadBalancer.
+    Value: !GetAtt WebAppLB.DNSName
+    Export:
+      Name: !Sub ${EnvironmentName}-WebAppLB
