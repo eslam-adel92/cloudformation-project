@@ -91,7 +91,6 @@ Resources:
           aws s3 cp s3://udacity-demo-1/udacity.zip .
           unzip -o udacity.zip
       ImageId: ami-0ac73f33a1888c64a
-      KeyName: Eslam-4096
       SecurityGroups:
       - Ref: WebServerSecGroup
       InstanceType: t3a.medium
